@@ -14,6 +14,7 @@ namespace Swagger.ObjectModel.Builders
     /// <summary>
     /// The required field exception.
     /// </summary>
+    [Serializable]
     public class RequiredFieldException : InvalidOperationException
     {
         /// <summary>

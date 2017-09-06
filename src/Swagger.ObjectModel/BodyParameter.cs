@@ -7,6 +7,9 @@
     /// </summary>
     public class BodyParameter : Parameter
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public BodyParameter()
         {
             Required = true;

@@ -5,6 +5,9 @@ namespace Swagger.ObjectModel
 
     using Swagger.ObjectModel.Attributes;
 
+    /// <summary>
+    /// Swagger Operation model
+    /// </summary>
     public class Operation : SwaggerModel
     {
         /// <summary>

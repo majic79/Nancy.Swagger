@@ -11,6 +11,9 @@ namespace Swagger.ObjectModel
     /// </summary>
     public class PathItem : SwaggerModel
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public PathItem()
         {
             Parameters = Enumerable.Empty<Parameter>();
@@ -64,7 +67,11 @@ namespace Swagger.ObjectModel
         [SwaggerProperty("parameters")]
         public IEnumerable<Parameter> Parameters { get; set; }
 
-
+        /// <summary>
+        /// Combine Path Items
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
         public PathItem Combine(PathItem other)
         {
 

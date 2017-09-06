@@ -50,6 +50,9 @@ namespace Swagger.ObjectModel.Builders
 
         private string description;
 
+        //<summary>
+        //Swagger DataType instance
+        //<summary>
         protected override Schema DataTypeInstance
         {
             get
@@ -117,6 +120,11 @@ namespace Swagger.ObjectModel.Builders
 
         #region Building
 
+        /// <summary>
+        /// Discriminator
+        /// </summary>
+        /// <param name="discriminator"></param>
+        /// <returns>The <see cref="SchemaBuilder{TModel}"/> instance.</returns>
         public SchemaBuilder<TModel> Discriminator(string discriminator)
         {
             this.discriminator = discriminator;
@@ -129,25 +137,43 @@ namespace Swagger.ObjectModel.Builders
             return this;
         }
 
+        /// <summary>
+        /// Set ReadOnly flag
+        /// </summary>
+        /// <returns>The <see cref="SchemaBuilder{TModel}"/> instance.</returns>
         public SchemaBuilder<TModel> IsReadOnly()
         {
             this.readOnly = true;
             return this;
         }
 
-
+        /// <summary>
+        /// Set documentation
+        /// </summary>
+        /// <param name="documentation"></param>
+        /// <returns>The <see cref="SchemaBuilder{TModel}"/> instance.</returns>
         public SchemaBuilder<TModel> ExternalDocumentation(ExternalDocumentation documentation)
         {
             this.documentation = documentation;
             return this;
         }
 
+        /// <summary>
+        /// Set documentation
+        /// </summary>
+        /// <param name="documentation"></param>
+        /// <returns>The <see cref="SchemaBuilder{TModel}"/> instance.</returns>
         public SchemaBuilder<TModel> ExternalDocumentation(ExternalDocumentationBuilder documentation)
         {
             this.documentation = documentation.Build();
             return this;
         }
 
+        /// <summary>
+        /// Set example
+        /// </summary>
+        /// <param name="example"></param>
+        /// <returns>The <see cref="SchemaBuilder{TModel}"/> instance.</returns>
         public SchemaBuilder<TModel> Example(object example)
         {
             this.example = example;

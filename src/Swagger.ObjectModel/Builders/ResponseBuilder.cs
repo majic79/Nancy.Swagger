@@ -101,9 +101,7 @@ namespace Swagger.ObjectModel.Builders
         /// <summary>
         /// The schema.
         /// </summary>
-        /// <param name="schema">
-        /// The schema.
-        /// </param>
+        /// <typeparam name="T">The schema</typeparam>
         /// <returns>
         /// The <see cref="ResponseBuilder"/>.
         /// </returns>

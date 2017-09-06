@@ -5,6 +5,9 @@
 
     using global::Swagger.ObjectModel;
 
+    /// <summary>
+    /// Swagger builder config
+    /// </summary>
     public static class SwaggerBuilderConfig
     {
         /// <summary>
@@ -12,6 +15,9 @@
         /// </summary>
         private static ConcurrentDictionary<string, Type> resolvedSchemas = new ConcurrentDictionary<string, Type>();
 
+        /// <summary>
+        /// Default Config
+        /// </summary>
         static SwaggerBuilderConfig()
         {
             ModelIdConvention = DefaultModelIdConvention;
@@ -59,6 +65,8 @@
         /// that can be used by tools reading the output for further and easier
         /// manipulation.
         /// </summary>
+        /// <param name="path"></param>
+        /// <param name="method">HTTP Method Verb</param>
         /// <param name="route">The route for which a nickname is returned.</param>
         /// <returns>a unique id for the given <paramref name="route"/> that can
         /// be used by tools reading the output for further and easier 

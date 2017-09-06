@@ -3,8 +3,16 @@ using System.Text;
 
 namespace Swagger.ObjectModel
 {
+    /// <summary>
+    /// Utilities object model
+    /// </summary>
     public static class Utilities
     {
+        /// <summary>
+        /// Convert to CamelCase
+        /// </summary>
+        /// <param name="val"></param>
+        /// <returns>val in CamelCase</returns>
         public static string ToCamelCase(string val)
         {
             if (String.IsNullOrEmpty(val))

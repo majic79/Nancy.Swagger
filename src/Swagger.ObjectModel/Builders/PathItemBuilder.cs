@@ -17,6 +17,10 @@ namespace Swagger.ObjectModel.Builders
         private readonly Operation operation = new Operation();
         private readonly HttpMethod method;
 
+        /// <summary>
+        /// constructor
+        /// </summary>
+        /// <param name="method"></param>
         public PathItemBuilder(HttpMethod method)
         {
             this.method = method;
@@ -66,7 +70,7 @@ namespace Swagger.ObjectModel.Builders
         /// <summary>
         /// Defines the operation for the path and method;
         /// </summary>
-        /// <param name="operation">
+        /// <param name="action">
         /// The operation.
         /// </param>
         /// <returns>

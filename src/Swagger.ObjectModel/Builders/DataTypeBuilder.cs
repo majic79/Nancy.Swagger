@@ -109,6 +109,9 @@ namespace Swagger.ObjectModel.Builders
         /// </summary>
         private bool? uniqueItems;
 
+        /// <summary>
+        /// Data type instance
+        /// </summary>
         protected virtual T DataTypeInstance
         {
             get
