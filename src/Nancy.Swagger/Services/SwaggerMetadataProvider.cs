@@ -18,6 +18,9 @@ namespace Nancy.Swagger.Services
             Description = ""
         };
 
+        private static string _host;
+        private static string _basePath;
+
         private static IDictionary<string, SecuritySchemeBuilder> _securitySchemes = new Dictionary<string, SecuritySchemeBuilder>();
 
         public static void SetInfo(string title, string version, string desc, Contact contact = null, string termsOfService = null)
@@ -30,6 +33,16 @@ namespace Nancy.Swagger.Services
                 Contact = contact,
                 TermsOfService = termsOfService
             };
+        }
+
+        public static void SetHost(string host)
+        {
+            _host = host;
+        }
+
+        public static void SetBaseUrl(string baseUrl)
+        {
+            _basePath = baseUrl;
         }
 
         public static void AddSecuritySchemeBuilder(SecuritySchemeBuilder builder, string name)
@@ -56,6 +69,9 @@ namespace Nancy.Swagger.Services
         public SwaggerRoot GetSwaggerJson()
         {
             var builder = new SwaggerRootBuilder();
+
+            builder.Host(_host);
+            builder.BasePath(_basePath);
 
             foreach (var pathItem in this.RetrieveSwaggerPaths())
             {
