@@ -14,6 +14,7 @@ using System.Security.Cryptography.X509Certificates;
 namespace Swagger.ObjectModel.Builders
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
     using System.Linq.Expressions;
 
@@ -80,7 +81,15 @@ namespace Swagger.ObjectModel.Builders
                 }
                 else
                 {
-                    schema.Ref = schema.Ref ?? "#/definitions/" + modelType.Name;
+                    if (typeof(IEnumerable).IsAssignableFrom(modelType))
+                    {
+                        Type subType = modelType.GetGenericArguments().FirstOrDefault();
+                        schema.Ref = schema.Ref ?? "#/definitions/" + subType?.Name + "[]";
+                    }
+                    else
+                    {
+                        schema.Ref = schema.Ref ?? "#/definitions/" + modelType.Name;
+                    }
                 }
                 return schema;
             }
