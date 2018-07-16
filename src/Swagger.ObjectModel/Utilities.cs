@@ -1,8 +1,8 @@
-﻿using System;
-using System.Text;
-
-namespace Swagger.ObjectModel
+﻿namespace Swagger.ObjectModel
 {
+    using System;
+    using System.Text;
+
     /// <summary>
     /// Utilities object model
     /// </summary>

@@ -1,8 +1,6 @@
-using System.Collections.Generic;
-
-
 namespace Swagger.ObjectModel
 {
+    using System.Collections.Generic;
     using Swagger.ObjectModel.Attributes;
 
     /// <summary>

@@ -1,5 +1,3 @@
-
-
 namespace Swagger.ObjectModel
 {
     using Swagger.ObjectModel.Attributes;

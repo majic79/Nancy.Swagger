@@ -1,5 +1,4 @@
-﻿
-namespace Swagger.ObjectModel
+﻿namespace Swagger.ObjectModel
 {
     using System.Collections.Generic;
 

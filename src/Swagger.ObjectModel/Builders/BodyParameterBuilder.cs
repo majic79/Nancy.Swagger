@@ -1,11 +1,10 @@
 ﻿//  <copyright file="BodyParameterBuilder.cs" company="Premise Health">
 //      Copyright (c) 2015 Premise Health. All rights reserved.
 //  </copyright>
-
-using System;
-
 namespace Swagger.ObjectModel.Builders
 {
+    using System;
+
     /// <summary>
     /// The body parameter builder.
     /// </summary>

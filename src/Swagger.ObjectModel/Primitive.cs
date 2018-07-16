@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Swagger.ObjectModel
+﻿namespace Swagger.ObjectModel
 {
+    using System;
+    using System.Collections.Generic;
     /// <summary>
     /// Represents a primitive Swagger data type.
     /// </summary>

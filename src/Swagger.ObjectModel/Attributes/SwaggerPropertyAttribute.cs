@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Swagger.ObjectModel.Attributes
+﻿namespace Swagger.ObjectModel.Attributes
 {
+    using System;
+
     [AttributeUsage(AttributeTargets.Property)]
     internal class SwaggerPropertyAttribute : Attribute
     {

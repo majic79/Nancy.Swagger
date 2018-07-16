@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Reflection;
-
-using Swagger.ObjectModel.Reflection;
-
-namespace Swagger.ObjectModel
+﻿namespace Swagger.ObjectModel
 {
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Dynamic;
+    using System.Linq;
+    using System.Reflection;
+
+    using Swagger.ObjectModel.Reflection;
     using Swagger.ObjectModel.Attributes;
 
     /// <summary>

@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-
-namespace Swagger.ObjectModel
+﻿namespace Swagger.ObjectModel
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+
     internal static class ReflectionExtensions
     {
         public static TAttribute GetCustomAttribute<TAttribute>(this ICustomAttributeProvider provider, bool inherits = true)
